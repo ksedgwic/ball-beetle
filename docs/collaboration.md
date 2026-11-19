@@ -91,11 +91,16 @@ The relay's address:
   of its data: the settings file with the relay key and the other
   secrets, the owner key, Postgres, the object store and the git
   volume (`./run.sh backup-hint` in the compose bundle).
-- No documented way to change a community's address was found.  One
-  write-up says a changed address gives a new, empty community.  Not
-  verified.
+- The address cannot be changed afterwards.  Block's
+  [relay guide][buzz-relay-guide] says to change the relay URL
+  "before you add data you care about", and that changing it later
+  "means starting over with a new, empty community".
 - A community that is meant to last should start under the name it
   will keep.
+- For a relay on the same machine the guide gives
+  `ws://127.0.0.1:3000`: `ws`, not `wss`, and `127.0.0.1`, not
+  `localhost`.  The scheme, host and port have to match the relay's
+  setting exactly, or signing in fails.
 
 Desktop requirements.  No single page of system requirements was
 found; these pages state them:
