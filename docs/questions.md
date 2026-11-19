@@ -28,8 +28,9 @@ One heading per question:
 - Why it matters: the repository, a package name and any domain or
   organisation handle use it.  Renaming is cheap while the project
   has two people.
-- Working name: ball-beetle (Ken).  A dung beetle pushes a ball, and
-  the robot may get a hard shell.
+- Working name: ball-beetle (Ken, 2026-11-19).  It is a plain
+  descriptive name, used until a larger group picks the real one.  A
+  dung beetle pushes a ball, and the robot may get a hard shell.
 - Options from [Ken's conversation][herd-1119], turn 2, with the
   assistant's remarks:
   - Khepri: the Egyptian scarab god, who rolled the sun across the
