@@ -22,7 +22,8 @@ Nothing here has been installed or tried.
   stars and about 3,900 open issues and pull requests.
 - Status: candidate.  Ken wants to try it on this project
   (2026-11-19): a preview tool can be tried here without risk to
-  established projects.  It depends on Cole's computer.
+  established projects.  Cole would try it too and has a Mac, which
+  runs the desktop app and a Claude agent.
 
 What it consists of:
 

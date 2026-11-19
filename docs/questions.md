@@ -64,7 +64,10 @@ One heading per question:
 - Notes:
   - The survey is in [collaboration.md](./collaboration.md).
   - Ken wants to try it on this project (2026-11-19).
-  - Open: Cole's computer.  Buzz's Claude agents need macOS or Linux.
+  - Cole would try it and has a Mac (2026-11-19).  A Mac runs the
+    desktop app and a Claude agent, so the point that was open is
+    closed.
+  - Still to choose before a trial: how to get a relay.
 
 ### Cameras on the robots or on the fence?
 
