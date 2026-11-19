@@ -26,7 +26,8 @@ Nothing here has been installed or tried.
   runs the desktop app and a Claude agent.
 - Decided 2026-11-19 (Ken): start with a lab relay on a machine of
   Ken's that is not reachable from the internet.  It is for learning
-  how Buzz and its relay work.  The community on it may have to be
+  how Buzz and its relay work.  Cole gets a login on that machine and
+  reaches the relay through ssh.  The community on it may have to be
   started again elsewhere; see "The relay's address" below.
 
 What it consists of:

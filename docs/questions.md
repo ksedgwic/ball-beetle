@@ -69,9 +69,11 @@ One heading per question:
     closed.
   - Ken starts with a lab relay on a machine of his own, not
     reachable from the internet (2026-11-19).  It is for learning.
-  - Still open: how Cole reaches the lab, and where a community that
-    is meant to last will run.  A community is tied to its relay's
-    address, so that one should start under the name it will keep.
+  - Cole gets a login on that machine and reaches the relay through
+    ssh (Ken, 2026-11-19).
+  - Still open: where a community that is meant to last will run.  A
+    community is tied to its relay's address, so that one should
+    start under the name it will keep.
 
 ### Cameras on the robots or on the fence?
 
