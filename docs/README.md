@@ -1,11 +1,10 @@
 # Project notes
 
-Outlines for ideas and research.  The idea is a pair of small robots
-that collect tennis balls around a court while a match is played.
-The project is at the research stage: the first task is to survey
-hardware and software components.
-The project layout and the code come later.  Nothing here is decided
-unless an entry says so.
+Outlines for ideas and research.  The idea is a small driving robot
+that clears stray tennis balls from a tennis court.  The project is
+at the research stage: the first task is to survey hardware and
+software components.  The project layout and the code come later.
+Nothing here is decided unless an entry says so.
 
 - [ideas.md](./ideas.md): what the project could be and do.
 - [hardware.md](./hardware.md): hardware components under

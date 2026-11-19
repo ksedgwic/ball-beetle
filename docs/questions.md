@@ -9,6 +9,50 @@ One heading per question:
     - Options: the choices seen so far.
     - Notes: findings, with sources.
 
+### Push the balls to the side, or pick them up?
+
+- Why it matters: it decides the front of the robot, whether there is
+  an intake and a hopper, and where the balls end up.
+- Options:
+  - Herd: push stray balls to a good spot at the side of the court
+    (Ken).
+  - Collect: a roller intake feeds a hopper, and players take balls
+    from the hopper.  The assistant proposed it when Cole asked about
+    picking balls up.
+- Notes: both are in [ideas.md](./ideas.md).  Sources:
+  [Ken's conversation][herd-1119], turn 1;
+  [Cole's conversation][conv-1119], turns 1, 2 and 8.
+
+### What is the project called?
+
+- Why it matters: the repository, a package name and any domain or
+  organisation handle use it.  Renaming is cheap while the project
+  has two people.
+- Working name: ball-beetle (Ken).  A dung beetle pushes a ball, and
+  the robot may get a hard shell.
+- Options from [Ken's conversation][herd-1119], turn 2, with the
+  assistant's remarks:
+  - Khepri: the Egyptian scarab god, who rolled the sun across the
+    sky.  Short and unusual.  One of the assistant's two picks.
+  - Kelpie: an Australian herding dog.  Describes herding; fairly
+    rare as a software name.  The other pick.
+  - Heeler, Collie: herding dogs.
+  - Rollie: slang for a pill bug, which has a hard shell.  Probably
+    not unique.
+  - dungbot: accurate; may not be taken seriously.
+  - Deuce, Let: short; likely to collide with other names.
+  - Fuzzherder: descriptive; probably free.
+  - Burro, Mule: a small working animal; a nod to Donkey Car.
+  - Sisyphus: used by Sisyphus Industries for kinetic sand tables.
+  - scarab-something (Ken).
+- Notes:
+  - The assistant on ball-beetle: friendly and literal, a bit generic.
+  - Avoid names that start with "Tenni-": Tennibot is an existing
+    product.
+  - Before settling: search GitHub and PyPI for the name, and check
+    the domain or organisation handle.  None of these has been
+    checked.
+
 ### Cameras on the robots or on the fence?
 
 - Why it matters: it decides the computer on each robot, the camera,
@@ -93,3 +137,4 @@ One heading per decision, newest first:
 (No entries yet.)
 
 [conv-1119]: ./sources/2026-11-19-donkey-car-tennis-ball-robot.md
+[herd-1119]: ./sources/2026-11-19-tennis-ball-herding-robot.md

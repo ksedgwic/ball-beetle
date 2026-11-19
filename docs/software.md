@@ -33,9 +33,10 @@ looks.
 - Platform: Python.  The car is built on a Raspberry Pi or a Jetson
   Nano.
 - Upkeep: not checked.
-- For: free.  Custom parts can record camera frames while a person
-  drives, and steer at a detected ball.  It supports differential
-  drive, by the conversation; not checked.
+- For: free.  Ken also names it as a possible base
+  ([2026-11-19][herd-1119]).  Custom parts can record camera frames
+  while a person drives, and steer at a detected ball.  It supports
+  differential drive, by Cole's conversation; not checked.
 - Against: its usual training method, behavior cloning, copies
   recorded driving and does not fit this task (see
   [ideas.md](./ideas.md)).  Its default camera frames of 160x120 are
@@ -139,3 +140,4 @@ A custom Donkey Car part, about 100 lines by the assistant's estimate.
   about half a second.
 
 [conv-1119]: ./sources/2026-11-19-donkey-car-tennis-ball-robot.md
+[herd-1119]: ./sources/2026-11-19-tennis-ball-herding-robot.md

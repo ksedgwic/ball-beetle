@@ -3,15 +3,22 @@
 What the project could be and do.  An idea does not have to be
 practical to be listed here; say what it is and what it would need.
 
-The entries filed on 2026-11-19 come from one
-[conversation][conv-1119] between Cole and an AI assistant.  The goals
-are Cole's.  The design ideas are the assistant's proposals unless
-marked "(Cole)".  None has been tested.
+The entries filed on 2026-11-19 come from two conversations with an
+AI assistant: [Cole's][conv-1119], about the design, and
+[Ken's][herd-1119], about the name.  The goals are Cole's and Ken's.
+The design ideas are the assistant's proposals unless marked "(Cole)"
+or "(Ken)".  None has been tested.
 
 ## Goals
 
-What the finished thing should do.  All from Cole,
-[2026-11-19][conv-1119].
+What the finished thing should do.
+
+From Ken, [2026-11-19][herd-1119]:
+
+- A driving robot that herds tennis balls on a tennis court.
+- It pushes stray balls to a good spot at the side of the court.
+
+From Cole, [2026-11-19][conv-1119]:
 
 - Collect tennis balls around a court while a match is played, as a
   ball boy does.
@@ -51,6 +58,23 @@ One heading per idea:
 - Needs: a ball detector and a steering controller; see
   [software.md](./software.md).
 - Source: [conversation of 2026-11-19][conv-1119], turn 2.
+- Status: open.
+
+### Herd the balls to the side of the court
+
+- What: the robot pushes stray balls along the ground to a good spot
+  at the side of the court.  It does not pick them up.  (Ken)
+- Needs: not discussed yet.  The roller intake below is the other
+  answer to the same question; see "Push the balls to the side, or
+  pick them up?" in [questions.md](./questions.md).
+- Source: Ken, [conversation of 2026-11-19][herd-1119], turn 1.
+- Status: open.
+
+### Hard shell
+
+- What: a hard shell that protects the robot, perhaps added later.
+  It is one reason for the name ball-beetle.  (Ken)
+- Source: Ken, [conversation of 2026-11-19][herd-1119], turn 1.
 - Status: open.
 
 ### Roller intake and hopper
@@ -141,4 +165,16 @@ One heading per idea:
   turn 7.
 - Status: open.
 
+## Existing products
+
+Robots and products that do a similar job.
+
+### Tennibot
+
+- What: a commercial robot that collects tennis balls.
+- Source: named by the assistant in
+  [Ken's conversation of 2026-11-19][herd-1119], turn 2.  No link
+  given.  Not checked.
+
 [conv-1119]: ./sources/2026-11-19-donkey-car-tennis-ball-robot.md
+[herd-1119]: ./sources/2026-11-19-tennis-ball-herding-robot.md
