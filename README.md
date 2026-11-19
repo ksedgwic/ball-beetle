@@ -1,6 +1,11 @@
 # ball-beetle
 
-A hobby project.  It is at the setup stage; there is no code yet.
+A hobby project to build small robots that collect tennis balls
+around a court while a match is played.
+
+It is at the research stage; there is no code yet.
+Ideas and the research on hardware and software components are kept
+as outlines in [docs/](./docs/README.md).
 
 ## Contributing
 

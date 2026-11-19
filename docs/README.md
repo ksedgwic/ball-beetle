@@ -1,0 +1,28 @@
+# Project notes
+
+Outlines for ideas and research.  The idea is a pair of small robots
+that collect tennis balls around a court while a match is played.
+The project is at the research stage: the first task is to survey
+hardware and software components.
+The project layout and the code come later.  Nothing here is decided
+unless an entry says so.
+
+- [ideas.md](./ideas.md): what the project could be and do.
+- [hardware.md](./hardware.md): hardware components under
+  consideration.
+- [software.md](./software.md): software components under
+  consideration.
+- [questions.md](./questions.md): open questions, and decisions with
+  their reasons.
+- [sources/](./sources/): material the outlines draw on, kept whole,
+  one file per source with the date first in its name.
+
+## Adding to an outline
+
+- Put an entry under the heading it fits.  Add a heading when none
+  fits.
+- Start an entry with its point in one line.  Details follow.
+- Give the source: a link, a datasheet, or who said it and when.
+- Say when something is a guess or has not been checked.
+- Do not delete an entry that turned out wrong or was passed over.
+  Mark it dropped and give the reason, so nobody repeats the work.
