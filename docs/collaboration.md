@@ -20,7 +20,9 @@ Nothing here has been installed or tried.
 - Upkeep: both repositories had commits on 2026-11-19.  Desktop app
   1.0.5 is dated 2026-11-18.  The relay repository has about 37,600
   stars and about 3,900 open issues and pull requests.
-- Status: candidate.  Not decided.
+- Status: candidate.  Ken wants to try it on this project
+  (2026-11-19): a preview tool can be tried here without risk to
+  established projects.  It depends on Cole's computer.
 
 What it consists of:
 
@@ -49,6 +51,37 @@ Ways to get a relay ([guide][buzz-relay-guide]):
 | Railway template | $8 to $15 a month, by the template pages' own estimate. |
 | Docker Compose on a server you run | The server.  Relay, Postgres, Redis, object store; HTTPS through Caddy. |
 | Local | None.  For trying it on one machine. |
+
+Desktop requirements.  No single page of system requirements was
+found; these pages state them:
+
+- [Desktop app README][buzz-app]: download, the table of which agent
+  runs on which system, and "Preview limitations".
+- [Release packages][buzz-app-releases]: macOS for Apple Silicon and
+  Intel, Windows x64, Linux x86-64 as `.deb` and AppImage.
+- Claude and Codex agents need macOS or Linux.  Goose and Pi agents
+  run on all three systems, each with a model provider's API key.
+- Windows: the installer is unsigned, and agent commands need bash
+  from Git for Windows ([relay README][buzz]).
+- Linux: a [troubleshooting guide][buzz-linux] covers rendering
+  problems.  The AppImage needs glibc 2.39 (Ubuntu 24.04, Fedora 40);
+  older systems use the `.deb`.  The guide was written for the earlier
+  0.5 desktop app; it does not say whether it holds for 1.0.
+
+Alternatives for a person whose computer cannot run a Claude agent:
+
+- Join as a person only.  The desktop app runs on Windows; only the
+  Claude and Codex agents do not.
+- [`buzz-acp`][buzz-acp] runs an agent without the desktop app, on
+  another macOS or Linux machine.  It documents an API key.
+- [`buzz`][buzz-cli], the command-line client, reads and sends
+  messages.
+- [Remote agents][buzz-remote] run on other hardware.  The first
+  provider is Kubernetes.
+- A [phone app][buzz-mobile] exists in the relay repository.  The
+  relay README lists it as "being wired up".
+- No web client for users was found.  `just web` in the app's
+  contributing guide is a development server.
 
 Claude as the agent:
 
@@ -118,7 +151,8 @@ Against, and unknowns:
 
 ## Repository host
 
-The project needs a public repository.  No host is chosen.
+The project needs a public repository.  Decided 2026-11-19 (Ken):
+GitHub.  The repository is not created yet.
 
 ### GitHub
 
@@ -140,6 +174,12 @@ Buzz does not favour either host.
 
 [buzz]: https://github.com/block/buzz
 [buzz-app]: https://github.com/block/buzz-app
+[buzz-app-releases]: https://github.com/block/buzz-app/releases
+[buzz-linux]: https://github.com/block/buzz/blob/main/docs/linux-rendering-troubleshooting.md
+[buzz-acp]: https://github.com/block/buzz/blob/main/crates/buzz-acp/README.md
+[buzz-cli]: https://github.com/block/buzz/blob/main/crates/buzz-cli/README.md
+[buzz-remote]: https://github.com/block/buzz/blob/main/docs/remote-agents.md
+[buzz-mobile]: https://github.com/block/buzz/blob/main/mobile/README.md
 [buzz-announce]: https://block.xyz/inside/introducing-buzz-where-humans-and-agents-work-together
 [buzz-relay-guide]: https://engineering.block.xyz/blog/run-your-own-buzz-relay
 [claude-legal]: https://code.claude.com/docs/en/legal-and-compliance

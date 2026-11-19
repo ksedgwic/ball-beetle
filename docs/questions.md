@@ -54,14 +54,6 @@ One heading per question:
     the domain or organisation handle.  None of these has been
     checked.
 
-### GitHub or GitLab for the public repository?
-
-- Why it matters: Cole and other contributors can read and add to the
-  project only once it is on a host.
-- Options: GitHub, GitLab.
-- Notes: see "Repository host" in
-  [collaboration.md](./collaboration.md).
-
 ### Use Buzz as the shared workspace?
 
 - Why it matters: it would be where the contributors and their agents
@@ -69,9 +61,10 @@ One heading per question:
   computer, and a private key per person.
 - Options: use it, try it for a while, or work through the repository
   and direct messages only.
-- Notes: the survey is in [collaboration.md](./collaboration.md).  It
-  depends on each person's computer: Buzz's Claude agents need macOS
-  or Linux.
+- Notes:
+  - The survey is in [collaboration.md](./collaboration.md).
+  - Ken wants to try it on this project (2026-11-19).
+  - Open: Cole's computer.  Buzz's Claude agents need macOS or Linux.
 
 ### Cameras on the robots or on the fence?
 
@@ -154,7 +147,15 @@ One heading per decision, newest first:
     - Reason: why this choice.
     - Passed over: the other options and why not.
 
-(No entries yet.)
+### The public repository is hosted on GitHub (2026-11-19)
+
+- Decided by Ken.
+- Reason: Claude Code's cloud sessions clone from GitHub and open
+  pull requests there, and the audience for this kind of project is
+  on GitHub.  Buzz does not favour either host.
+- Passed over: GitLab, which Ken generally prefers.
+- Details: "Repository host" in
+  [collaboration.md](./collaboration.md).
 
 [conv-1119]: ./sources/2026-11-19-donkey-car-tennis-ball-robot.md
 [herd-1119]: ./sources/2026-11-19-tennis-ball-herding-robot.md
