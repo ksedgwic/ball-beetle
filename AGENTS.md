@@ -7,8 +7,7 @@ rules, written for human contributors, are in
 ## Project
 
 ball-beetle is a hobby project, open source under the MIT license.
-The idea is a pair of small robots that collect tennis balls around a
-court while a match is played.  It is at the research stage: no
+`README.md` says what it is for.  It is at the research stage: no
 language, layout, build or test commands are chosen yet.  Add them to
 this file when they exist.
 
