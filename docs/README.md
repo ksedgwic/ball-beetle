@@ -11,6 +11,8 @@ Nothing here is decided unless an entry says so.
   consideration.
 - [software.md](./software.md): software components under
   consideration.
+- [collaboration.md](./collaboration.md): tools for working together,
+  and the repository host.
 - [questions.md](./questions.md): open questions, and decisions with
   their reasons.
 - [sources/](./sources/): material the outlines draw on, kept whole,
