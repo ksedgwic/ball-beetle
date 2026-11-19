@@ -67,7 +67,11 @@ One heading per question:
   - Cole would try it and has a Mac (2026-11-19).  A Mac runs the
     desktop app and a Claude agent, so the point that was open is
     closed.
-  - Still to choose before a trial: how to get a relay.
+  - Ken starts with a lab relay on a machine of his own, not
+    reachable from the internet (2026-11-19).  It is for learning.
+  - Still open: how Cole reaches the lab, and where a community that
+    is meant to last will run.  A community is tied to its relay's
+    address, so that one should start under the name it will keep.
 
 ### Cameras on the robots or on the fence?
 

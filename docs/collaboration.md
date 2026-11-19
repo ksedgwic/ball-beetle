@@ -24,6 +24,10 @@ Nothing here has been installed or tried.
   (2026-11-19): a preview tool can be tried here without risk to
   established projects.  Cole would try it too and has a Mac, which
   runs the desktop app and a Claude agent.
+- Decided 2026-11-19 (Ken): start with a lab relay on a machine of
+  Ken's that is not reachable from the internet.  It is for learning
+  how Buzz and its relay work.  The community on it may have to be
+  started again elsewhere; see "The relay's address" below.
 
 What it consists of:
 
@@ -59,6 +63,38 @@ Ways to get a relay ([guide][buzz-relay-guide]):
 | Railway template | $8 to $15 a month, by the template pages' own estimate. |
 | Docker Compose on a server you run | The server.  Relay, Postgres, Redis, object store; HTTPS through Caddy. |
 | Local | None.  For trying it on one machine. |
+
+The hosted service, as third-party write-ups report it
+([pricing][buzz-pricing-report], [self-hosting][buzz-selfhost-report]).
+Block's pricing page could not be read without a browser.
+
+- Free to start, with no payment method.  A community gets an address
+  under `communities.buzz.xyz`.
+- Remote agents run on Block's computers, so an agent keeps running
+  while its owner's computer is off: $0.65 per vCPU-hour.  On a relay
+  of one's own, remote agents need a Kubernetes cluster.
+- Data: 100 GB a month included, then $0.15 per GB-month.
+- Direct messages are private but not end-to-end encrypted, and Block
+  may read messages to operate, secure or moderate the service.
+- Hosted use teaches the product.  Running a relay also teaches
+  deployment, keys and members, backups, and the relay as a Nostr
+  relay.
+
+The relay's address:
+
+- A community is tied to the address of its relay.  The relay README
+  says "the URL is authoritative for the workspace".  The relay's
+  settings take the public host name for the relay URL, the media URL
+  and the allowed origins.
+- Moving a relay to another machine under the same address is a copy
+  of its data: the settings file with the relay key and the other
+  secrets, the owner key, Postgres, the object store and the git
+  volume (`./run.sh backup-hint` in the compose bundle).
+- No documented way to change a community's address was found.  One
+  write-up says a changed address gives a new, empty community.  Not
+  verified.
+- A community that is meant to last should start under the name it
+  will keep.
 
 Desktop requirements.  No single page of system requirements was
 found; these pages state them:
@@ -190,5 +226,7 @@ Buzz does not favour either host.
 [buzz-mobile]: https://github.com/block/buzz/blob/main/mobile/README.md
 [buzz-announce]: https://block.xyz/inside/introducing-buzz-where-humans-and-agents-work-together
 [buzz-relay-guide]: https://engineering.block.xyz/blog/run-your-own-buzz-relay
+[buzz-pricing-report]: https://fourweekmba.com/ai-blocks-buzz-1-0-free-to-self-host-0-65-vcpu-hour-hosted/
+[buzz-selfhost-report]: https://horadecodar.com.br/?p=40645
 [claude-legal]: https://code.claude.com/docs/en/legal-and-compliance
 [claude-web]: https://code.claude.com/docs/en/claude-code-on-the-web
