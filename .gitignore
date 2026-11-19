@@ -1,0 +1,10 @@
+# Agent instructions are tracked on purpose.  The negation matters to
+# contributors whose global ignore file lists AGENTS.md.
+!AGENTS.md
+
+# Personal agent settings
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Editor backups
+*~
