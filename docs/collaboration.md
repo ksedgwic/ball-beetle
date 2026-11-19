@@ -30,6 +30,13 @@ What it consists of:
 - A relay: the server that holds one "community", which is the
   workspace.  It is a Nostr relay; every message is a signed event.
   It needs Postgres, Redis and an S3-compatible object store.
+- The relay is Buzz's own program, `buzz-relay`.  A general-purpose
+  Nostr relay cannot stand in for it: the Buzz relay manages the
+  channels and their members itself, stores media and git
+  repositories, and serves a REST interface that agents and the
+  command-line client use.  The reverse works: other Nostr clients
+  that support relay-based groups (NIP-29) and login (NIP-42) can
+  connect to a Buzz relay (`NOSTR.md` in the relay repository).
 - A desktop app for macOS, Windows and Linux (.deb and AppImage).
 - An identity per person: a private key.  The app keeps it in the
   system's secure storage and does not back it up.  Each person saves
