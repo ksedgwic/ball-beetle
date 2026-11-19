@@ -7,8 +7,15 @@ rules, written for human contributors, are in
 ## Project
 
 ball-beetle is a hobby project, open source under the MIT license.
-It is at the setup stage: no language, build or test commands are
-chosen yet.  Add them to this file when they exist.
+The idea is a pair of small robots that collect tennis balls around a
+court while a match is played.  It is at the research stage: no
+language, layout, build or test commands are chosen yet.  Add them to
+this file when they exist.
+
+Ideas and the research on hardware and software components are kept
+as Markdown outlines in `docs/`.  `docs/README.md` lists the outlines
+and says how to add an entry.  When a session finds something the
+project should keep, file it there.
 
 ## Who you work for
 
@@ -31,6 +38,9 @@ chosen yet.  Add them to this file when they exist.
 - Keep private data out of everything that is tracked or pushed:
   credentials, hostnames and addresses of private machines, personal
   details, paths in a home directory.
+- Say who an idea came from, by first name only.  No surnames,
+  account names, contact details, or links to a person's private
+  pages or conversations.
 
 ## Changes to agent instructions
 
