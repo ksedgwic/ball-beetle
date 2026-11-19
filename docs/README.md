@@ -23,6 +23,7 @@ unless an entry says so.
   fits.
 - Start an entry with its point in one line.  Details follow.
 - Give the source: a link, a datasheet, or who said it and when.
+  Name a person by first name only.
 - Say when something is a guess or has not been checked.
 - Do not delete an entry that turned out wrong or was passed over.
   Mark it dropped and give the reason, so nobody repeats the work.
