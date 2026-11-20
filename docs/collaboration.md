@@ -24,11 +24,14 @@ Nothing here has been installed or tried.
   (2026-11-19): a preview tool can be tried here without risk to
   established projects.  Cole would try it too and has a Mac, which
   runs the desktop app and a Claude agent.
-- Decided 2026-11-19 (Ken): start with a lab relay on a machine of
-  Ken's that is not reachable from the internet.  It is for learning
-  how Buzz and its relay work.  Cole gets an ssh account on that
-  machine that can only forward the relay's port.  The community on
-  it cannot move to another address; see "The relay's address" below.
+- Decided 2026-11-20 (Ken): the relay runs on a server of Ken's
+  that has a public address, behind that server's web server, under
+  an https address.  Contributors get the address from Ken.
+- Dropped: a first plan of 2026-11-19, a lab relay on a machine that
+  is not reachable from the internet, with ssh port forwards.  The
+  desktop app accepts only `wss://` and `https://` addresses, so the
+  lab would also have needed a certificate for a name that points to
+  the local machine, and an ssh account for each person.
 
 What it consists of:
 
@@ -97,10 +100,13 @@ The relay's address:
   "means starting over with a new, empty community".
 - A community that is meant to last should start under the name it
   will keep.
-- For a relay on the same machine the guide gives
-  `ws://127.0.0.1:3000`: `ws`, not `wss`, and `127.0.0.1`, not
-  `localhost`.  The scheme, host and port have to match the relay's
-  setting exactly, or signing in fails.
+- Desktop app 1.0.5 accepts only `wss://` and `https://` addresses,
+  with no exception for a local address (its `docs/communities.md`).
+  The relay guide's `ws://127.0.0.1:3000` for a relay on the same
+  machine was written for the older desktop app; the new app refuses
+  it.  Tried 2026-11-19.
+- The scheme, host and port have to match the relay's setting
+  exactly, or signing in fails.
 
 Desktop requirements.  No single page of system requirements was
 found; these pages state them:
@@ -168,16 +174,27 @@ Git:
   relay can be read without one was not checked.  The project needs a
   public repository in any case.
 
-Setting it up for two people, from the READMEs:
+Setting it up for two people.  Steps 1 to 3 as tried on 2026-11-19
+with desktop app 1.0.5; steps 4 to 6 from the READMEs, not tried yet:
 
-1. One person gets a relay (hosted, Railway or own server) and creates
-   the community.
-2. Each person installs the desktop app, creates an identity and saves
-   a copy of the private key.
-3. The second person joins by an invite link.
-4. Each person creates an agent in the app, with Claude as the
+1. One person runs a relay.  Its settings name the owner's public
+   key, and its address has to be `wss://` or `https://`.
+2. Each person installs the desktop app.  On Linux it also builds
+   from source: release 1.0.5 built at the first try on Fedora 42
+   with Tauri's build packages (`bin/just desktop` in the
+   repository).
+3. Each person needs a key.  The welcome screen of 1.0.5 no longer
+   offers "Create a new identity" (the README still shows it).  It
+   offers a sign-in that creates an account with Block's account
+   service; the key made that way is linked to the account and backed
+   up there.  The way without an account: type the community address
+   into "Community URL", choose Continue, then "I already have a
+   key", and paste a Nostr private key (`nsec1...`) made elsewhere.
+4. The relay's owner adds each person's public key as a member; the
+   bundled relay admits members only.
+5. Each person creates an agent in the app, with Claude as the
    harness, and signs in.
-5. Create a channel, invite both agents, and mention an agent to give
+6. Create a channel, invite both agents, and mention an agent to give
    it work.
 
 For:
