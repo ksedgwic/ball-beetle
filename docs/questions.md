@@ -138,7 +138,24 @@ One heading per question:
 
 - Why it matters: at $249 two robots cost about $1,300.  At the
   reseller price of $718.88 they cost about $2,200.
-- Notes: out of stock at SparkFun on 2026-11-19.
+- Notes:
+  - Out of stock at SparkFun on 2026-11-19, by the conversation.
+  - Seen 2026-11-20: the list price is $399 since July 2026.
+    SparkFun has it in stock at $399.00 and Amazon sells it at
+    $399.00.  So it can be bought at list, and the list price is 60 %
+    above the figure the estimate used.  Details and sources are in
+    [hardware.md](./hardware.md).
+  - Still open: buy now, or wait for the successor NVIDIA announced
+    for the first half of 2027.
+
+### How does a camera on a 60 cm mast reach the computer?
+
+- Why it matters: the longest camera cable seen that fits the
+  computer is 500 mm.
+- Options: a lower mast, the computer mounted higher in the robot, or
+  a kit that carries the camera signal over an HDMI cable.
+- Notes: see "Camera cable" in [bom.md](./bom.md).  Nothing is
+  tested.
 
 ### Which language and project layout?
 

@@ -9,6 +9,8 @@ Nothing here is decided unless an entry says so.
 - [ideas.md](./ideas.md): what the project could be and do.
 - [hardware.md](./hardware.md): hardware components under
   consideration.
+- [bom.md](./bom.md): draft bill of materials, with the prices and
+  stock seen.
 - [software.md](./software.md): software components under
   consideration.
 - [collaboration.md](./collaboration.md): tools for working together,

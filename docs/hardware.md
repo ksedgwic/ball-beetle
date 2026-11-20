@@ -9,6 +9,10 @@ prices were read from listings that day and are marked "listed".
 Every other number is the assistant's estimate.  Nothing has been
 bought or measured.
 
+Prices and stock marked "seen 2026-11-20" were read from the sellers'
+pages that day.  [bom.md](./bom.md) lists a part for each line of the
+cost estimate below, with the prices seen.
+
 ## Entry form
 
     ### <part name>
@@ -27,22 +31,34 @@ bought or measured.
 - Purpose: run the ball detector, on the robot or in a box at the
   fence.
 - Source: [SparkFun][sf-orin], [Newegg][ne-orin].
-- Cost: $249 list.  On 2026-11-19 SparkFun listed it out of stock,
-  with a notice that the price may change because of component costs
-  and tariffs.  One Newegg reseller listed $718.88.
+- Cost: $399 list since July 2026, by [NVIDIA's price table][nv-faq];
+  $249 before that ([report of the increase][cnx-jetson]).  Seen
+  2026-11-20: SparkFun $399.00, in stock; Amazon $399.00, sold by
+  Amazon, delivery in 10 to 14 days; [Seeed Studio][seeed-orin]
+  $449.00, one per account; Newegg out of stock.
+- Earlier reading: the conversation of 2026-11-19 gives $249 list,
+  SparkFun out of stock with a notice that the price may change
+  because of component costs and tariffs, and one Newegg reseller at
+  $718.88.
 - Interfaces: two camera ports.  The power estimates assume its 15 W
   mode.
 - For: estimated speed of YOLOv8n with TensorRT: 60 or more frames per
   second at a 416 px input, 25 to 30 at 1280 px, about 15 on a full
   1080p frame.  None of the three is measured.
-- Against: availability and price.
+- Against: the price is 60 % above the figure in the cost estimate
+  below.  SparkFun's page says that availability may be limited at
+  times.  NVIDIA announced a successor, the Jetson Orin Nano 2, for
+  the first half of 2027, with no price
+  ([JetsonHacks, 2026-08-26][jh-0826]).
 - Status: candidate.
 
 ### Jetson Nano (original)
 
 - Purpose: as above.  The Donkey Car has a version built on it.
 - Against: about 20 frames per second, which makes steering lag
-  (estimate).
+  (estimate).  NVIDIA lists the Jetson Nano developer kit as end of
+  life, and the module as available through January 2027
+  ([lifecycle page][nv-life], read 2026-11-20).
 - Status: candidate.  The conversation moved on to the Orin Nano.
 
 ### Raspberry Pi 5
@@ -109,6 +125,8 @@ the four rows give 10 px at 0.8 m, 2.5 m, 7.1 m and 10.7 m.
 - For: at 15 cm a ball 10 m away sits almost on the horizon, and the
   distance estimate is off by metres.  At 60 cm, one metre of distance
   is about 10 px in the frame at 10 m (1920 px capture, 62° lens).
+- Against: the longest camera cable seen on 2026-11-20 that fits the
+  computer is 500 mm.  See "Camera cable" in [bom.md](./bom.md).
 - Status: candidate.
 
 ## Chassis and drive
@@ -129,8 +147,11 @@ the four rows give 10 px at 0.8 m, 2.5 m, 7.1 m and 10.7 m.
 
 - Purpose: turn in place, for example along the fence.
 - Cost: about $150 (estimate).  No part named.
-- For: the Donkey Car software supports differential drive, by the
-  conversation.  Not checked.
+- For: the Donkey Car software supports differential drive
+  ([actuators page][dk-act], read 2026-11-20).
+- Against: no kit of the right size that takes a 4S pack was seen
+  near $150 on 2026-11-20.  The parts seen are in
+  [bom.md](./bom.md).
 - Status: candidate.
 
 ## Ball intake
@@ -191,8 +212,16 @@ roam the perimeter.
 
 - Two robots and one shared charger: about $1,300.
 - With the Jetson at the reseller price of $718.88: about $2,200.
+- With the prices seen on 2026-11-20: about $1,750 to $2,330, and
+  some lines not priced.  See [bom.md](./bom.md).
 
 [conv-1119]: ./sources/2026-11-19-donkey-car-tennis-ball-robot.md
 [sf-orin]: https://www.sparkfun.com/nvidia-jetson-orin-nano-developer-kit.html
+[nv-faq]: https://developer.nvidia.com/embedded/faq#jetson-prices
+[cnx-jetson]: https://www.cnx-software.com/2026/07/22/nvidia-increases-the-price-of-jetson-modules-and-devkits-by-up-to-101/
+[seeed-orin]: https://www.seeedstudio.com/NVIDIAr-Jetson-Orintm-Nano-Super-Developer-Kit-Bundle.html
+[jh-0826]: https://jetsonhacks.com/2026/08/26/jetsonhacks-august-2026-newsletter/
+[nv-life]: https://developer.nvidia.com/embedded/lifecycle
+[dk-act]: https://docs.donkeycar.com/parts/actuators/
 [ne-orin]: https://www.newegg.com/nvidia-jetson-orin-nano-super-developer-kit/p/N82E16813190033
 [sf-imx219]: https://www.sparkfun.com/arducam-imx219-visible-light-fixed-focus-camera-module-for-nvidiar-jetson-agx-orin-orin-nano-orin-nx.html

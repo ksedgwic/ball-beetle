@@ -36,7 +36,8 @@ looks.
 - For: free.  Ken also names it as a possible base
   ([2026-11-19][herd-1119]).  Custom parts can record camera frames
   while a person drives, and steer at a detected ball.  It supports
-  differential drive, by Cole's conversation; not checked.
+  differential drive, with the drive types `DC_TWO_WHEEL` and
+  `DC_TWO_WHEEL_L298N` ([actuators page][dk-act], read 2026-11-20).
 - Against: its usual training method, behavior cloning, copies
   recorded driving and does not fit this task (see
   [ideas.md](./ideas.md)).  Its default camera frames of 160x120 are
@@ -141,3 +142,4 @@ A custom Donkey Car part, about 100 lines by the assistant's estimate.
 
 [conv-1119]: ./sources/2026-11-19-donkey-car-tennis-ball-robot.md
 [herd-1119]: ./sources/2026-11-19-tennis-ball-herding-robot.md
+[dk-act]: https://docs.donkeycar.com/parts/actuators/
