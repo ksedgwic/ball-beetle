@@ -21,6 +21,75 @@ The last column says how a line is obtained:
 - make: no part on sale does the job.  It has to be designed and
   built from stock material.
 
+## Vision unit, hand-carried
+
+The computer and the cameras, built first as a unit carried by hand
+on a court.  It records video and runs the detector without a drive.
+Ken proposed it on 2026-11-20: the vision parts are easier to get than
+the mechanical ones, and much of the vision work can be tested
+without a robot.  It has no mast; its height is decided later.  The
+computer and the cameras move to the robot afterwards.
+
+| Line | Candidate | Qty | Price each | How |
+|---|---|---|---|---|
+| Computer | Jetson Orin Nano Super developer kit | 1 | $399.00 | buy |
+| Camera | Arducam IMX219, B0191 | 2 | $19.95 | buy |
+| Camera cable | 15-pin to 22-pin, 15 cm, in the camera's box | 2 | included | buy |
+| Storage | 128 GB microSD, SanDisk Extreme | 1 | $39.99 | buy |
+| Battery | Anker 25,000 mAh 165 W power bank, A1695 | 1 | $91.19 | buy |
+| Battery to computer | USB-C PD to 5.5 x 2.5 mm barrel, fixed 12 V | 1 | $7.95 | buy |
+| Camera bracket and handle | none named | 1 | not priced | make |
+
+The priced lines come to $578.03.  For setup the unit also needs a
+display with a DisplayPort input or a DisplayPort to HDMI adapter, a
+keyboard and a USB flash drive.  These are assumed to be on hand.
+
+### Hardest to get, vision unit
+
+1. Computer.  The only line with a supply risk; see "Computer" below.
+2. Battery power for the computer.  The parts are in stock, but the
+   combination is not proven.  See "Power from a power bank" below.
+3. Storage.  Cards are in stock, but their prices are rising.
+
+### Notes on the vision unit
+
+- Camera cable: Arducam's [product page][arducam-b0191] lists a 15 cm
+  15-to-22-pin cable and a 15 cm 22-to-22-pin cable in the box, and
+  sells the module at $15.99.  SparkFun's page does not list the
+  contents.
+- Storage: the [SanDisk Extreme 128 GB][amz-sd128] is $39.99, sold by
+  Amazon, in stock.  Memory card and flash drive prices are up about
+  124 % from 2025 ([Tom's Hardware][th-flash]; only the headline was
+  read).  An NVMe SSD (see "Storage" below) can be added for long
+  recordings.
+- Power from a power bank: the kit cannot be powered through its
+  USB-C port, only through the barrel jack, 9 to 20 V
+  ([NVIDIA forum][nv-usbc]).  A USB-C PD power bank therefore needs a
+  trigger cable that asks it for a fixed voltage.
+  [JetsonHacks][jh-vmount] suggests a 15 V cable; Adafruit's 15 V
+  cable is out of stock, and its [12 V cable][ada-12v] ($7.95) is in
+  stock.  Many power banks do not offer 12 V.  The
+  [Anker A1695][anker-a1695] lists 12 V at 3 A (36 W) on each USB-C
+  port, which is above the kit's 25 W mode.  The
+  [UGREEN 25,000 mAh 145 W][amz-ugreen] is $59.98, but its output
+  voltages were not read.  One user on NVIDIA's forum could not power
+  the kit from a power bank ([thread][nv-bank-fail]); no report of a
+  working setup was found.  The 4S LiPo of the robot build is the
+  other choice.
+- Camera bracket: no bracket for two of these 25 x 24 mm boards was
+  found on sale.  The [Waveshare IMX219-83][ws-imx219-83] ($52.99,
+  stock not shown) has two IMX219 sensors 60 mm apart on one board,
+  with cables.  It would replace both cameras and the bracket, and
+  fixes the spacing.
+- Setup: the kit has a DisplayPort output, no HDMI
+  ([user guide][nv-layout]).  From JetPack 7.2 there is no microSD
+  image: an installer is written to a USB flash drive and installs to
+  the microSD card or an NVMe drive ([quick start][nv-quick]).  A kit
+  with firmware older than 36.0 needs a [firmware update][nv-fw]
+  first; without an Ubuntu PC this is done by booting the JetPack
+  5.1.3 microSD image once.  Which firmware a new kit ships with is
+  not checked.
+
 ## Per robot
 
 | Line | Candidate | Qty | Price each | How |
@@ -223,7 +292,8 @@ Added when filed.  None is priced or checked.
 
 B&H, Arrow, Micro Center, Mouser, Arducam's own store and Cytron's
 own store refused or timed out.  Their prices and stock are not
-known.
+known.  A later reading the same day loaded Arducam's product page
+for the camera, and B&H's page, where ordering was paused that day.
 
 [conv-1119]: ./sources/2026-11-19-donkey-car-tennis-ball-robot.md
 [nv-faq]: https://developer.nvidia.com/embedded/faq#jetson-prices
@@ -260,3 +330,15 @@ known.
 [definity]: https://github.com/kwong09/definity-robot-project
 [amz-hota]: https://www.amazon.com/dp/B0BCJRDSRG
 [amz-b6]: https://www.amazon.com/dp/B0H3TTSHNQ
+[arducam-b0191]: https://www.arducam.com/b0191-arducam-imx219-visible-light-fixed-focus-camera-module-nvidia-jetson-nano-raspberry-pi-compute-module.html
+[amz-sd128]: https://www.amazon.com/dp/B0G8LLXFJH
+[th-flash]: https://www.tomshardware.com/pc-components/storage/memory-cards-and-flash-drives-prices-rocket-124-percent-some-products-peak-at-261-percent-jump-increases-from-2025-driven-by-ai-chip-shortage-across-a-range-of-formats-and-capacities
+[nv-usbc]: https://forums.developer.nvidia.com/t/powering-the-nano-orin/366665
+[jh-vmount]: https://jetsonhacks.com/2024/05/23/v-mount-battery-to-power-nvidia-jetson-electronics-projects/
+[ada-12v]: https://www.adafruit.com/product/5450
+[anker-a1695]: https://www.anker.com/products/a1695-anker-power-bank-25000mah-165w
+[amz-ugreen]: https://www.amazon.com/dp/B0BJQ7F16T
+[nv-bank-fail]: https://forums.developer.nvidia.com/t/unable-to-use-power-bank-for-jetson-orin-nano/255939
+[ws-imx219-83]: https://www.waveshare.com/imx219-83-stereo-camera.htm
+[nv-quick]: https://docs.nvidia.com/jetson/orin-nano-devkit/user-guide/latest/quick_start.html
+[nv-fw]: https://docs.nvidia.com/jetson/orin-nano-devkit/user-guide/latest/update_firmware.html
